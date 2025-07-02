@@ -32,7 +32,8 @@ pipeline {                                      // 1  // Defines the start of th
             environment {                       // 9  // Defines environment variables specific to this stage
                 scannerHome = tool 'tushar-sonar-scanner'
                                                  //     Sets the SonarQube scanner tool
-            }                                   // 9  // Ends the environment block for this stage
+            }  
+                                 // 9  // Ends the environment block for this stage
             steps {                             // 10 // Defines the steps that will be executed in this stage
                 withSonarQubeEnv('tushar-sonarqube-server') {
                                                  //     Executes the SonarQube analysis within the SonarQube environment
@@ -41,7 +42,6 @@ pipeline {                                      // 1  // Defines the start of th
                 }                               // 10 // Ends the withSonarQubeEnv block
             }                                   // 10 // Ends the steps block for 'SonarQube analysis' stage
         }                                       // 8  // Ends the 'SonarQube analysis' stage
-
     }                                           // 3  // Ends the stages block
 }
 
