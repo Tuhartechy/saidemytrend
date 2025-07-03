@@ -49,7 +49,7 @@ pipeline {
                                 "pattern": "jarstaging/(*)",
                                 "target": "tushar-libs-release-local/{1}",
                                 "flat": "false",
-                                "props": "${properties}"
+                                "props": "${properties}",
                                 "exclusions": [ "*.sha1", "*md5"]
                             }
                         ]
